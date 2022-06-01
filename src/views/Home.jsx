@@ -3,6 +3,11 @@ import { View, Dimensions, Text } from 'react-native'
 import { Shadow } from 'react-native-shadow-2'
 
 import Header from '../components/Header'
+
+import Wind from '../../assets/icons/wind'
+import Humidity from '../../assets/icons/rain_drops'
+import Umbrella from '../../assets/icons/umbrella'
+
 import PartlyCloudy from '../../assets/weather/partly_cloudy'
 
 const Home = () => {
@@ -47,6 +52,67 @@ const Home = () => {
             Última Actualización 10:30
           </Text>
           <PartlyCloudy style={{ marginTop: 15 }} width={125} height={125} />
+        </View>
+        <View style={{ paddingHorizontal: 30, paddingVertical: 20 }}>
+          <View
+            style={{
+              flexDirection: 'row',
+              paddingHorizontal: 20,
+              justifyContent: 'space-between'
+            }}>
+            <Text style={{ fontFamily: 'outfit_bold', fontSize: 55 }}>10°</Text>
+            <View
+              style={{
+                flexDirection: 'row',
+                alignItems: 'flex-start'
+              }}>
+              <View>
+                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                  <Wind width={28} height={28} />
+                  <Text
+                    style={{
+                      fontFamily: 'outfit_medium',
+                      marginLeft: 10,
+                      fontSize: 18
+                    }}>
+                    9 km/h
+                  </Text>
+                </View>
+                <View
+                  style={{
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    marginTop: 5
+                  }}>
+                  <Humidity width={28} height={28} />
+                  <Text
+                    style={{
+                      fontFamily: 'outfit_medium',
+                      marginLeft: 10,
+                      fontSize: 18
+                    }}>
+                    43%
+                  </Text>
+                </View>
+              </View>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  marginLeft: 10
+                }}>
+                <Umbrella width={28} height={28} />
+                <Text
+                  style={{
+                    fontFamily: 'outfit_medium',
+                    marginLeft: 10,
+                    fontSize: 18
+                  }}>
+                  100
+                </Text>
+              </View>
+            </View>
+          </View>
         </View>
       </View>
     </View>
