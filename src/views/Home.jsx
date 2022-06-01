@@ -32,12 +32,21 @@ const Home = () => {
           marginTop: Constants.statusBarHeight
         }}>
         <Header city="Buenos Aires" />
-        <View style={{ alignSelf: 'center' }}>
-          <Text style={{ textAlign: 'center' }}>Parcialmente Nublado</Text>
-          <Text style={{ textAlign: 'center' }}>
+        <View
+          style={{ alignSelf: 'center', alignItems: 'center', marginTop: 10 }}>
+          <Text style={{ fontFamily: 'outfit', fontSize: 18 }}>
+            Parcialmente Nublado
+          </Text>
+          <Text
+            style={{
+              fontFamily: 'outfit_light',
+              fontSize: 14,
+              opacity: 0.3,
+              marginTop: 5
+            }}>
             Última Actualización 10:30
           </Text>
-          <PartlyCloudy />
+          <PartlyCloudy style={{ marginTop: 15 }} width={125} height={125} />
         </View>
       </View>
     </View>
